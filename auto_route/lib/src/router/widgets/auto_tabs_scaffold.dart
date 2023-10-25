@@ -217,12 +217,9 @@ class AutoTabsScaffold extends StatelessWidget {
           body: child,
           bottomNavigationBar: bottomNavigationBuilder == null
               ? null
-              : AnimatedBuilder(
-                  animation: tabsRouter,
-                  builder: (_, __) => bottomNavigationBuilder!(
-                    context,
-                    tabsRouter,
-                  ),
+              : bottomNavigationBuilder!(
+                  context,
+                  tabsRouter,
                 ),
         );
       },
